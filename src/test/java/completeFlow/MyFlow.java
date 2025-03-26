@@ -46,6 +46,8 @@ public class MyFlow {
 		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"//reports//"+"Screenshot"+".png"));
+		driver.getWindowHandles();
+		driver.getCurrentUrl();
 		
 
 		
