@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class MyFlow {
 
 	public static void main(String[] args) throws IOException {
@@ -46,7 +48,9 @@ public class MyFlow {
 		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"//reports//"+"Screenshot"+".png"));
-		
+		System.out.println("MyTest");
+		System.out.println("MyTest1");
+
 		
 
 		
